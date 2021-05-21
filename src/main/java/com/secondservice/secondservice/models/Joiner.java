@@ -39,4 +39,13 @@ public class Joiner {
     @Column(name = "role_id")
     private Integer roleId;
 
+    public Joiner(JoinerPojo joiner) {
+        this.id = null;
+        this.identificationNumber = joiner.getIdentificationNumber();
+        this.name = joiner.getName();
+        this.lastname = joiner.getLastName();
+        this.englishLevel = joiner.getEnglishLevel();
+        this.domainExperience = joiner.getDomainExperience();
+        this.roleId = 181;
+    }
 }
