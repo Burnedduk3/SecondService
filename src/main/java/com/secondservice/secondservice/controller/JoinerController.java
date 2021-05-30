@@ -2,14 +2,16 @@ package com.secondservice.secondservice.controller;
 
 import com.secondservice.secondservice.models.Joiner;
 import com.secondservice.secondservice.services.JoinerService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping
+@Api(value = "JoinerControllerAPI", produces = MediaType.APPLICATION_JSON_VALUE)
 public class JoinerController {
 
     @Autowired
